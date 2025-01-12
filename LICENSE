@@ -2,7 +2,15 @@ MIT License
 
 Copyright (c) 2025 RavixR00T
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
+İzin verildiği sürece, bu yazılımı ticari olmayan veya ticari amaçlar için kopyalayabilir, dağıtabilir ve değiştirebilirsiniz. Ancak, aşağıdaki koşulları yerine getirmeniz gerekmektedir:
+
+    1.Yazılımın orijinal lisansını ve telif hakkı bildirimlerini her kopyada veya önemli bir kısmında belirtmelisiniz.
+    2.Bu yazılımı, herhangi bir kötüye kullanım, zararlı faaliyet veya yasa dışı işler için kullanmamayı kabul ediyorsunuz.
+    3.Yazılımın değiştirilmiş sürümleri de bu lisans altında olmalıdır.
+    4.Yazar, yazılımı kullanmanın veya dağıtmanın sonuçlarından sorumlu değildir.
+
+
+ermission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
