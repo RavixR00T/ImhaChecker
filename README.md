@@ -13,6 +13,7 @@ Bu programı çalıştırmak için aşağıdaki kütüphanelerin yüklü olması
 - **mechanize**
 - **selenium**
 - **webdriver_manager**
+- **VPN ANONSURF 4NOMIZER**
 
 Program başında gerekli kütüphaneler otomatik olarak yüklenecektir.
 
