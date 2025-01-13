@@ -68,7 +68,7 @@ print("""
 |_____|_| |_| |_|_| |_|\__,_|\_____|_| |_|\___|\___|_|\_\___|_|   
                                 2025  
                                 version 0.0.1        
-                                Coded by elitares
+                                Coded by ravixR00T
                                                                         """)
 print ('[#] Hesaplarinizi "hesaplistesi.txt" dosyasina e-posta ve sifre formatinda kaydedin [#]')
 print ('[#] Format: e-posta:sifre (Her satırda bir hesap olacak) [#]')
