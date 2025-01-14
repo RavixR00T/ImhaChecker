@@ -7,7 +7,6 @@
 # 2. Bu yazılımı, herhangi bir kötüye kullanım, zararlı faaliyet veya yasa dışı işler için kullanmamayı kabul ediyorsunuz.
 # 3. Yazılımın değiştirilmiş sürümleri de bu lisans altında olmalıdır.
 # 4. Yazar, yazılımı kullanmanın veya dağıtmanın sonuçlarından sorumlu değildir.
-
 import subprocess
 import sys
 import mechanize
@@ -43,22 +42,6 @@ def load_proxies():
         print("Proxy listesi 'proxyler.txt' dosyasında bulunamadı. Lütfen dosyayı ekleyin.")
         return []
 
-def install_chrome_driver():
-    chromedriver_dir = os.path.expanduser('~/bin')
-    if not os.path.isdir(chromedriver_dir):
-        os.makedirs(chromedriver_dir)
-
-    if not os.path.isfile(f'{chromedriver_dir}/chromedriver'):
-        print("ChromeDriver yüklü değil. Yükleniyor...")
-        subprocess.check_call(["wget", "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip", "-P", "/tmp"])
-        subprocess.check_call(["unzip", "/tmp/chromedriver_linux64.zip", "-d", chromedriver_dir])
-        subprocess.check_call(["chmod", "+x", f"{chromedriver_dir}/chromedriver"])
-        print(f"ChromeDriver başarıyla {chromedriver_dir} dizinine yüklendi.")
-    else:
-        print("ChromeDriver zaten yüklü.")
-
-    os.environ["PATH"] += os.pathsep + chromedriver_dir
-
 print(""" 
  _____           _            _____ _               _             
 |_   _|         | |          / ____| |             | |            
@@ -68,7 +51,7 @@ print("""
 |_____|_| |_| |_|_| |_|\__,_|\_____|_| |_|\___|\___|_|\_\___|_|   
                                 2025  
                                 version 0.0.1        
-                                Coded by ravixR00T
+                                Coded by elitares
                                                                         """)
 print ('[#] Hesaplarinizi "hesaplistesi.txt" dosyasina e-posta ve sifre formatinda kaydedin [#]')
 print ('[#] Format: e-posta:sifre (Her satırda bir hesap olacak) [#]')
@@ -86,15 +69,13 @@ accFail = []
 outfile = open('calisanhesaplar.txt', 'w')
 failfile = open('calismayanhesaplar.txt', 'w')
 
-install_chrome_driver()
-
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 try:
     with open("hesaplistesi.txt", "r") as filestream:
         for line in filestream:
             driver.get('https://www.netflix.com/tr/login')
-            currentline = line.split(':')
+            currentline = line.strip().split(':')
             print(f'currentline : {currentline}')
 
             time.sleep(3)
@@ -146,4 +127,4 @@ except Exception as e:
         failfile.write(str(all) + '\n')
 
     with open("islem_durumu.txt", 'w') as status_file:
-        status_file.write(f"İşlem Başarısız: {e}\n") 
+        status_file.write(f"İşlem Başarısız: {e}\n")
