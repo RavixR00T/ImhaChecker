@@ -1,0 +1,3 @@
+mechanize
+selenium
+webdriver-manager
